@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "air.dontunsneak.client.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ClientPlayerEntitySneakMixin",
+    "KeyboardInputMixin",
+    "MinecraftClientSneakMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

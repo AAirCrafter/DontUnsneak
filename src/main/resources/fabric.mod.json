@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "dontunsneak",
+  "version": "${version}",
+  "name": "DontUnsneak",
+  "description": "Dont unseak when opening a gui like the inventory",
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://dc.aircrafter.cloud",
+        "modmenu.source": "https://github.com/AAirCrafter/sip",
+        "modmenu.modrinth": "https://modrinth.com/mod/seeinvisplayers",
+        "PlanetMC": "https://www.planetminecraft.com/mod/seeinvisplayers/",
+        "modmenu.youtube": "https://www.youtube.com/@aaircrafter"
+      },
+      "update_checker": true
+    }
+  },
+  "contact": {
+    "homepage": "https://aircrafter.cloud",
+    "issues": "https://github.com/AAirCrafter/sip"
+  },
+  "license": "All rights reserved",
+  "authors": [
+    "AAirCrafter"
+  ],
+  "icon": "assets/dontunsneak/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "air.dontunsneak.client.DontunsneakDataGenerator"
+    ],
+    "client": [
+      "air.dontunsneak.client.DontunsneakClient"
+    ],
+    "main": [
+      "air.dontunsneak.Dontunsneak"
+    ],
+    "modmenu": [
+      "air.dontunsneak.client.ModMenuConfig"
+    ]
+  },
+  "mixins": [
+    "dontunsneak.mixins.json",
+    {
+      "config": "dontunsneak.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
